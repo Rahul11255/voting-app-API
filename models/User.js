@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      default: "./proile_default_img.png", 
+      default: "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1712739152~exp=1712739752~hmac=88952ebb16b4caf309768844393d48bf02caed15b6cac9282c0efe1fc00a4ae2", 
     },
     isVoted: {
       type: Boolean,

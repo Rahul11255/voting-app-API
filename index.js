@@ -5,6 +5,7 @@ const body_parser = require("body-parser")
 require("dotenv").config()
 const app = express();
 const db = require("./db")
+const fileupload = require('express-fileupload')
 
 // Controll All routes 
 const auth_route = require("./routes/auth");
@@ -14,6 +15,9 @@ const candidate_route = require("./routes/candidate")
 const PORT = process.env.PORT 
 
 // Middleware
+app.use(fileupload({
+  useTempFiles:true
+}))
 app.use(morgan("tiny"));
 app.use(body_parser.json())
 app.use(express.json());

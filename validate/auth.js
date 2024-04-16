@@ -20,15 +20,16 @@ exports.userSignupValidator = [
 
     check('password')
     .isLength({ min: 6 })
-    .withMessage("Password must be at least 6 characters long")
-    .matches(/[a-z]/)
-    .withMessage("Missing lowercase letter in password")
-    .matches(/[A-Z]/)
-    .withMessage("Missing uppercase letter in password")
-    .matches(/[0-9]/)
-    .withMessage("Missing digit in password")
-    .matches(/[!@#$%^&*(),.?":{}|<>]/)
-    .withMessage("Missing special character in password"),
+    // .withMessage("Password must be at least 6 characters long")
+    // .matches(/[a-z]/)
+    // .withMessage("Missing lowercase letter in password")
+    // .matches(/[A-Z]/)
+    // .withMessage("Missing uppercase letter in password")
+    // .matches(/[0-9]/)
+    // .withMessage("Missing digit in password")
+    // .matches(/[!@#$%^&*(),.?":{}|<>]/)
+    // .withMessage("Missing special character in password"),
+    ,
     check('state')
     .not()
     .isEmpty()
